@@ -1,0 +1,621 @@
+[2025-08-06T11:18:38.833+0000] {processor.py:157} INFO - Started process (PID=33) to work on /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:18:38.834+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/ml_pipeline_dag.py for tasks to queue
+[2025-08-06T11:18:38.836+0000] {logging_mixin.py:151} INFO - [2025-08-06T11:18:38.836+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:18:38.863+0000] {logging_mixin.py:151} INFO - [2025-08-06T11:18:38.859+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/ml_pipeline_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ml_pipeline_dag.py", line 113, in <module>
+    data_processing_task = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 226, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 794, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: data_processing). Invalid arguments were:
+**kwargs: {'volumes': ['/opt/airflow/data:/app/data', '/opt/airflow/scripts:/app/scripts']}
+[2025-08-06T11:18:38.864+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:18:38.885+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/ml_pipeline_dag.py took 0.054 seconds
+[2025-08-06T11:19:08.957+0000] {processor.py:157} INFO - Started process (PID=34) to work on /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:19:08.959+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/ml_pipeline_dag.py for tasks to queue
+[2025-08-06T11:19:08.970+0000] {logging_mixin.py:151} INFO - [2025-08-06T11:19:08.962+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:19:09.018+0000] {logging_mixin.py:151} INFO - [2025-08-06T11:19:09.011+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/ml_pipeline_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ml_pipeline_dag.py", line 113, in <module>
+    data_processing_task = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 226, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 794, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: data_processing). Invalid arguments were:
+**kwargs: {'volumes': ['/opt/airflow/data:/app/data', '/opt/airflow/scripts:/app/scripts']}
+[2025-08-06T11:19:09.018+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:19:09.043+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/ml_pipeline_dag.py took 0.093 seconds
+[2025-08-06T11:19:39.104+0000] {processor.py:157} INFO - Started process (PID=35) to work on /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:19:39.106+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/ml_pipeline_dag.py for tasks to queue
+[2025-08-06T11:19:39.108+0000] {logging_mixin.py:151} INFO - [2025-08-06T11:19:39.108+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:19:39.146+0000] {logging_mixin.py:151} INFO - [2025-08-06T11:19:39.141+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/ml_pipeline_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ml_pipeline_dag.py", line 113, in <module>
+    data_processing_task = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 226, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 794, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: data_processing). Invalid arguments were:
+**kwargs: {'volumes': ['/opt/airflow/data:/app/data', '/opt/airflow/scripts:/app/scripts']}
+[2025-08-06T11:19:39.147+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:19:39.170+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/ml_pipeline_dag.py took 0.070 seconds
+[2025-08-06T11:20:09.205+0000] {processor.py:157} INFO - Started process (PID=36) to work on /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:20:09.206+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/ml_pipeline_dag.py for tasks to queue
+[2025-08-06T11:20:09.209+0000] {logging_mixin.py:151} INFO - [2025-08-06T11:20:09.208+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:20:09.227+0000] {logging_mixin.py:151} INFO - [2025-08-06T11:20:09.223+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/ml_pipeline_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ml_pipeline_dag.py", line 113, in <module>
+    data_processing_task = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 226, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 794, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: data_processing). Invalid arguments were:
+**kwargs: {'volumes': ['/opt/airflow/data:/app/data', '/opt/airflow/scripts:/app/scripts']}
+[2025-08-06T11:20:09.228+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:20:09.250+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/ml_pipeline_dag.py took 0.048 seconds
+[2025-08-06T11:20:40.281+0000] {processor.py:157} INFO - Started process (PID=37) to work on /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:20:40.282+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/ml_pipeline_dag.py for tasks to queue
+[2025-08-06T11:20:40.285+0000] {logging_mixin.py:151} INFO - [2025-08-06T11:20:40.284+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:20:40.306+0000] {logging_mixin.py:151} INFO - [2025-08-06T11:20:40.302+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/ml_pipeline_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ml_pipeline_dag.py", line 113, in <module>
+    data_processing_task = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 226, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 794, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: data_processing). Invalid arguments were:
+**kwargs: {'volumes': ['/opt/airflow/data:/app/data', '/opt/airflow/scripts:/app/scripts']}
+[2025-08-06T11:20:40.306+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:20:40.325+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/ml_pipeline_dag.py took 0.048 seconds
+[2025-08-06T11:21:10.357+0000] {processor.py:157} INFO - Started process (PID=38) to work on /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:21:10.359+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/ml_pipeline_dag.py for tasks to queue
+[2025-08-06T11:21:10.361+0000] {logging_mixin.py:151} INFO - [2025-08-06T11:21:10.361+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:21:10.379+0000] {logging_mixin.py:151} INFO - [2025-08-06T11:21:10.376+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/ml_pipeline_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ml_pipeline_dag.py", line 113, in <module>
+    data_processing_task = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 226, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 794, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: data_processing). Invalid arguments were:
+**kwargs: {'volumes': ['/opt/airflow/data:/app/data', '/opt/airflow/scripts:/app/scripts']}
+[2025-08-06T11:21:10.380+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:21:10.403+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/ml_pipeline_dag.py took 0.049 seconds
+[2025-08-06T11:21:40.511+0000] {processor.py:157} INFO - Started process (PID=39) to work on /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:21:40.512+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/ml_pipeline_dag.py for tasks to queue
+[2025-08-06T11:21:40.515+0000] {logging_mixin.py:151} INFO - [2025-08-06T11:21:40.515+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:21:40.537+0000] {logging_mixin.py:151} INFO - [2025-08-06T11:21:40.533+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/ml_pipeline_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ml_pipeline_dag.py", line 113, in <module>
+    data_processing_task = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 226, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 794, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: data_processing). Invalid arguments were:
+**kwargs: {'volumes': ['/opt/airflow/data:/app/data', '/opt/airflow/scripts:/app/scripts']}
+[2025-08-06T11:21:40.538+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:21:40.557+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/ml_pipeline_dag.py took 0.050 seconds
+[2025-08-06T11:22:11.509+0000] {processor.py:157} INFO - Started process (PID=40) to work on /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:22:11.510+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/ml_pipeline_dag.py for tasks to queue
+[2025-08-06T11:22:11.512+0000] {logging_mixin.py:151} INFO - [2025-08-06T11:22:11.511+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:22:11.586+0000] {logging_mixin.py:151} INFO - [2025-08-06T11:22:11.577+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/ml_pipeline_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ml_pipeline_dag.py", line 113, in <module>
+    data_processing_task = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 226, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 794, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: data_processing). Invalid arguments were:
+**kwargs: {'volumes': ['/opt/airflow/data:/app/data', '/opt/airflow/scripts:/app/scripts']}
+[2025-08-06T11:22:11.587+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:22:11.627+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/ml_pipeline_dag.py took 0.122 seconds
+[2025-08-06T11:22:41.694+0000] {processor.py:157} INFO - Started process (PID=41) to work on /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:22:41.697+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/ml_pipeline_dag.py for tasks to queue
+[2025-08-06T11:22:41.703+0000] {logging_mixin.py:151} INFO - [2025-08-06T11:22:41.702+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:22:41.734+0000] {logging_mixin.py:151} INFO - [2025-08-06T11:22:41.729+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/ml_pipeline_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ml_pipeline_dag.py", line 113, in <module>
+    data_processing_task = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 226, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 794, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: data_processing). Invalid arguments were:
+**kwargs: {'volumes': ['/opt/airflow/data:/app/data', '/opt/airflow/scripts:/app/scripts']}
+[2025-08-06T11:22:41.735+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:22:41.756+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/ml_pipeline_dag.py took 0.071 seconds
+[2025-08-06T11:23:13.841+0000] {processor.py:157} INFO - Started process (PID=42) to work on /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:23:13.845+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/ml_pipeline_dag.py for tasks to queue
+[2025-08-06T11:23:13.853+0000] {logging_mixin.py:151} INFO - [2025-08-06T11:23:13.852+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:23:13.891+0000] {logging_mixin.py:151} INFO - [2025-08-06T11:23:13.887+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/ml_pipeline_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ml_pipeline_dag.py", line 113, in <module>
+    data_processing_task = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 226, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 794, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: data_processing). Invalid arguments were:
+**kwargs: {'volumes': ['/opt/airflow/data:/app/data', '/opt/airflow/scripts:/app/scripts']}
+[2025-08-06T11:23:13.892+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:23:13.917+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/ml_pipeline_dag.py took 0.089 seconds
+[2025-08-06T11:23:45.024+0000] {processor.py:157} INFO - Started process (PID=43) to work on /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:23:45.025+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/ml_pipeline_dag.py for tasks to queue
+[2025-08-06T11:23:45.029+0000] {logging_mixin.py:151} INFO - [2025-08-06T11:23:45.028+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:23:45.055+0000] {logging_mixin.py:151} INFO - [2025-08-06T11:23:45.050+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/ml_pipeline_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ml_pipeline_dag.py", line 113, in <module>
+    data_processing_task = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 226, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 794, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: data_processing). Invalid arguments were:
+**kwargs: {'volumes': ['/opt/airflow/data:/app/data', '/opt/airflow/scripts:/app/scripts']}
+[2025-08-06T11:23:45.055+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:23:45.075+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/ml_pipeline_dag.py took 0.056 seconds
+[2025-08-06T11:24:17.012+0000] {processor.py:157} INFO - Started process (PID=44) to work on /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:24:17.014+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/ml_pipeline_dag.py for tasks to queue
+[2025-08-06T11:24:17.016+0000] {logging_mixin.py:151} INFO - [2025-08-06T11:24:17.016+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:24:17.035+0000] {logging_mixin.py:151} INFO - [2025-08-06T11:24:17.031+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/ml_pipeline_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ml_pipeline_dag.py", line 113, in <module>
+    data_processing_task = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 226, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 794, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: data_processing). Invalid arguments were:
+**kwargs: {'volumes': ['/opt/airflow/data:/app/data', '/opt/airflow/scripts:/app/scripts']}
+[2025-08-06T11:24:17.035+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:24:17.053+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/ml_pipeline_dag.py took 0.045 seconds
+[2025-08-06T11:24:49.161+0000] {processor.py:157} INFO - Started process (PID=45) to work on /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:24:49.162+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/ml_pipeline_dag.py for tasks to queue
+[2025-08-06T11:24:49.164+0000] {logging_mixin.py:151} INFO - [2025-08-06T11:24:49.164+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:24:49.182+0000] {logging_mixin.py:151} INFO - [2025-08-06T11:24:49.178+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/ml_pipeline_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ml_pipeline_dag.py", line 113, in <module>
+    data_processing_task = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 226, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 794, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: data_processing). Invalid arguments were:
+**kwargs: {'volumes': ['/opt/airflow/data:/app/data', '/opt/airflow/scripts:/app/scripts']}
+[2025-08-06T11:24:49.183+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:24:49.201+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/ml_pipeline_dag.py took 0.044 seconds
+[2025-08-06T11:25:21.287+0000] {processor.py:157} INFO - Started process (PID=46) to work on /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:25:21.289+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/ml_pipeline_dag.py for tasks to queue
+[2025-08-06T11:25:21.293+0000] {logging_mixin.py:151} INFO - [2025-08-06T11:25:21.293+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:25:21.329+0000] {logging_mixin.py:151} INFO - [2025-08-06T11:25:21.323+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/ml_pipeline_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ml_pipeline_dag.py", line 113, in <module>
+    data_processing_task = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 226, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 794, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: data_processing). Invalid arguments were:
+**kwargs: {'volumes': ['/opt/airflow/data:/app/data', '/opt/airflow/scripts:/app/scripts']}
+[2025-08-06T11:25:21.330+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:25:21.348+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/ml_pipeline_dag.py took 0.066 seconds
+[2025-08-06T11:25:52.413+0000] {processor.py:157} INFO - Started process (PID=47) to work on /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:25:52.414+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/ml_pipeline_dag.py for tasks to queue
+[2025-08-06T11:25:52.417+0000] {logging_mixin.py:151} INFO - [2025-08-06T11:25:52.416+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:25:52.436+0000] {logging_mixin.py:151} INFO - [2025-08-06T11:25:52.432+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/ml_pipeline_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ml_pipeline_dag.py", line 113, in <module>
+    data_processing_task = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 226, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 794, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: data_processing). Invalid arguments were:
+**kwargs: {'volumes': ['/opt/airflow/data:/app/data', '/opt/airflow/scripts:/app/scripts']}
+[2025-08-06T11:25:52.436+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:25:52.456+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/ml_pipeline_dag.py took 0.047 seconds
+[2025-08-06T11:26:24.502+0000] {processor.py:157} INFO - Started process (PID=48) to work on /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:26:24.503+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/ml_pipeline_dag.py for tasks to queue
+[2025-08-06T11:26:24.505+0000] {logging_mixin.py:151} INFO - [2025-08-06T11:26:24.505+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:26:24.525+0000] {logging_mixin.py:151} INFO - [2025-08-06T11:26:24.521+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/ml_pipeline_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ml_pipeline_dag.py", line 113, in <module>
+    data_processing_task = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 226, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 794, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: data_processing). Invalid arguments were:
+**kwargs: {'volumes': ['/opt/airflow/data:/app/data', '/opt/airflow/scripts:/app/scripts']}
+[2025-08-06T11:26:24.525+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:26:24.543+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/ml_pipeline_dag.py took 0.044 seconds
+[2025-08-06T11:26:56.544+0000] {processor.py:157} INFO - Started process (PID=49) to work on /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:26:56.546+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/ml_pipeline_dag.py for tasks to queue
+[2025-08-06T11:26:56.549+0000] {logging_mixin.py:151} INFO - [2025-08-06T11:26:56.548+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:26:56.567+0000] {logging_mixin.py:151} INFO - [2025-08-06T11:26:56.564+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/ml_pipeline_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ml_pipeline_dag.py", line 113, in <module>
+    data_processing_task = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 226, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 794, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: data_processing). Invalid arguments were:
+**kwargs: {'volumes': ['/opt/airflow/data:/app/data', '/opt/airflow/scripts:/app/scripts']}
+[2025-08-06T11:26:56.567+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:26:56.595+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/ml_pipeline_dag.py took 0.054 seconds
+[2025-08-06T11:27:28.659+0000] {processor.py:157} INFO - Started process (PID=50) to work on /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:27:28.660+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/ml_pipeline_dag.py for tasks to queue
+[2025-08-06T11:27:28.663+0000] {logging_mixin.py:151} INFO - [2025-08-06T11:27:28.662+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:27:28.681+0000] {logging_mixin.py:151} INFO - [2025-08-06T11:27:28.678+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/ml_pipeline_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ml_pipeline_dag.py", line 113, in <module>
+    data_processing_task = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 226, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 794, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: data_processing). Invalid arguments were:
+**kwargs: {'volumes': ['/opt/airflow/data:/app/data', '/opt/airflow/scripts:/app/scripts']}
+[2025-08-06T11:27:28.682+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:27:28.700+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/ml_pipeline_dag.py took 0.045 seconds
+[2025-08-06T11:27:59.797+0000] {processor.py:157} INFO - Started process (PID=51) to work on /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:27:59.799+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/ml_pipeline_dag.py for tasks to queue
+[2025-08-06T11:27:59.801+0000] {logging_mixin.py:151} INFO - [2025-08-06T11:27:59.800+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:27:59.817+0000] {logging_mixin.py:151} INFO - [2025-08-06T11:27:59.813+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/ml_pipeline_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ml_pipeline_dag.py", line 113, in <module>
+    data_processing_task = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 226, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 794, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: data_processing). Invalid arguments were:
+**kwargs: {'volumes': ['/opt/airflow/data:/app/data', '/opt/airflow/scripts:/app/scripts']}
+[2025-08-06T11:27:59.817+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:27:59.838+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/ml_pipeline_dag.py took 0.043 seconds
+[2025-08-06T11:28:31.878+0000] {processor.py:157} INFO - Started process (PID=52) to work on /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:28:31.879+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/ml_pipeline_dag.py for tasks to queue
+[2025-08-06T11:28:31.882+0000] {logging_mixin.py:151} INFO - [2025-08-06T11:28:31.882+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:28:31.898+0000] {logging_mixin.py:151} INFO - [2025-08-06T11:28:31.895+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/ml_pipeline_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ml_pipeline_dag.py", line 113, in <module>
+    data_processing_task = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 226, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 794, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: data_processing). Invalid arguments were:
+**kwargs: {'volumes': ['/opt/airflow/data:/app/data', '/opt/airflow/scripts:/app/scripts']}
+[2025-08-06T11:28:31.899+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:28:31.916+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/ml_pipeline_dag.py took 0.041 seconds
+[2025-08-06T11:29:04.016+0000] {processor.py:157} INFO - Started process (PID=53) to work on /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:29:04.018+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/ml_pipeline_dag.py for tasks to queue
+[2025-08-06T11:29:04.021+0000] {logging_mixin.py:151} INFO - [2025-08-06T11:29:04.021+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:29:04.043+0000] {logging_mixin.py:151} INFO - [2025-08-06T11:29:04.039+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/ml_pipeline_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ml_pipeline_dag.py", line 113, in <module>
+    data_processing_task = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 226, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 794, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: data_processing). Invalid arguments were:
+**kwargs: {'volumes': ['/opt/airflow/data:/app/data', '/opt/airflow/scripts:/app/scripts']}
+[2025-08-06T11:29:04.044+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:29:04.063+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/ml_pipeline_dag.py took 0.049 seconds
+[2025-08-06T11:29:34.122+0000] {processor.py:157} INFO - Started process (PID=54) to work on /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:29:34.124+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/ml_pipeline_dag.py for tasks to queue
+[2025-08-06T11:29:34.127+0000] {logging_mixin.py:151} INFO - [2025-08-06T11:29:34.126+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:29:34.148+0000] {logging_mixin.py:151} INFO - [2025-08-06T11:29:34.144+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/ml_pipeline_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ml_pipeline_dag.py", line 113, in <module>
+    data_processing_task = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 226, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 794, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: data_processing). Invalid arguments were:
+**kwargs: {'volumes': ['/opt/airflow/data:/app/data', '/opt/airflow/scripts:/app/scripts']}
+[2025-08-06T11:29:34.149+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:29:34.182+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/ml_pipeline_dag.py took 0.063 seconds
+[2025-08-06T11:30:04.407+0000] {processor.py:157} INFO - Started process (PID=55) to work on /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:30:04.409+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/ml_pipeline_dag.py for tasks to queue
+[2025-08-06T11:30:04.413+0000] {logging_mixin.py:151} INFO - [2025-08-06T11:30:04.412+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:30:04.438+0000] {logging_mixin.py:151} INFO - [2025-08-06T11:30:04.433+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/ml_pipeline_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ml_pipeline_dag.py", line 113, in <module>
+    data_processing_task = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 226, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 794, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: data_processing). Invalid arguments were:
+**kwargs: {'volumes': ['/opt/airflow/data:/app/data', '/opt/airflow/scripts:/app/scripts']}
+[2025-08-06T11:30:04.439+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:30:04.458+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/ml_pipeline_dag.py took 0.055 seconds
+[2025-08-06T11:30:35.457+0000] {processor.py:157} INFO - Started process (PID=56) to work on /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:30:35.459+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/ml_pipeline_dag.py for tasks to queue
+[2025-08-06T11:30:35.462+0000] {logging_mixin.py:151} INFO - [2025-08-06T11:30:35.462+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:30:35.497+0000] {logging_mixin.py:151} INFO - [2025-08-06T11:30:35.489+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/ml_pipeline_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ml_pipeline_dag.py", line 113, in <module>
+    data_processing_task = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 226, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 794, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: data_processing). Invalid arguments were:
+**kwargs: {'volumes': ['/opt/airflow/data:/app/data', '/opt/airflow/scripts:/app/scripts']}
+[2025-08-06T11:30:35.498+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:30:35.530+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/ml_pipeline_dag.py took 0.079 seconds
+[2025-08-06T11:31:05.694+0000] {processor.py:157} INFO - Started process (PID=57) to work on /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:31:05.697+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/ml_pipeline_dag.py for tasks to queue
+[2025-08-06T11:31:05.701+0000] {logging_mixin.py:151} INFO - [2025-08-06T11:31:05.701+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:31:05.726+0000] {logging_mixin.py:151} INFO - [2025-08-06T11:31:05.721+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/ml_pipeline_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ml_pipeline_dag.py", line 113, in <module>
+    data_processing_task = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 226, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 794, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: data_processing). Invalid arguments were:
+**kwargs: {'volumes': ['/opt/airflow/data:/app/data', '/opt/airflow/scripts:/app/scripts']}
+[2025-08-06T11:31:05.727+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:31:05.745+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/ml_pipeline_dag.py took 0.057 seconds
+[2025-08-06T11:31:35.804+0000] {processor.py:157} INFO - Started process (PID=58) to work on /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:31:35.806+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/ml_pipeline_dag.py for tasks to queue
+[2025-08-06T11:31:35.808+0000] {logging_mixin.py:151} INFO - [2025-08-06T11:31:35.808+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:31:35.829+0000] {logging_mixin.py:151} INFO - [2025-08-06T11:31:35.825+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/ml_pipeline_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ml_pipeline_dag.py", line 113, in <module>
+    data_processing_task = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 226, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 794, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: data_processing). Invalid arguments were:
+**kwargs: {'volumes': ['/opt/airflow/data:/app/data', '/opt/airflow/scripts:/app/scripts']}
+[2025-08-06T11:31:35.829+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:31:35.848+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/ml_pipeline_dag.py took 0.047 seconds
+[2025-08-06T11:32:06.833+0000] {processor.py:157} INFO - Started process (PID=59) to work on /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:32:06.835+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/ml_pipeline_dag.py for tasks to queue
+[2025-08-06T11:32:06.837+0000] {logging_mixin.py:151} INFO - [2025-08-06T11:32:06.837+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:32:06.857+0000] {logging_mixin.py:151} INFO - [2025-08-06T11:32:06.854+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/ml_pipeline_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ml_pipeline_dag.py", line 113, in <module>
+    data_processing_task = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 226, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 794, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: data_processing). Invalid arguments were:
+**kwargs: {'volumes': ['/opt/airflow/data:/app/data', '/opt/airflow/scripts:/app/scripts']}
+[2025-08-06T11:32:06.858+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/ml_pipeline_dag.py
+[2025-08-06T11:32:06.878+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/ml_pipeline_dag.py took 0.047 seconds
