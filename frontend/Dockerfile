@@ -4,14 +4,11 @@ FROM node:18-alpine
 # Set working directory
 WORKDIR /app
 
-# Copy package files
-COPY package*.json ./
-
-# Install dependencies
-RUN npm install
-
-# Copy source code
+# Copy ALL application files first (respecting .dockerignore)
 COPY . .
+
+# Install dependencies based on the copied package.json
+RUN npm install
 
 # Build the app for production
 RUN npm run build
@@ -23,4 +20,4 @@ RUN npm install -g serve
 EXPOSE 3000
 
 # Start the app
-CMD ["serve", "-s", "build", "-l", "3000"] 
+CMD ["serve", "-s", "build", "-l", "3000"]
