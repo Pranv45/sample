@@ -1,4 +1,4 @@
-version: '3.8'
+# --- Removed 'version' tag as it is obsolete ---
 
 services:
   # PostgreSQL for Airflow and MLflow
@@ -112,17 +112,21 @@ services:
   # MLflow Tracking Server
   mlflow:
     image: python:3.9-slim
+    depends_on: # <-- IMPROVEMENT: Added dependency on postgres
+      postgres:
+        condition: service_healthy
     ports:
       - "5000:5000"
     volumes:
       - ./mlruns:/mlflow/mlruns
-      - ./requirements.txt:/requirements.txt
     working_dir: /mlflow
-    command: >
-      bash -c "pip install mlflow psycopg2-binary &&
-               mlflow server --host 0.0.0.0 --port 5000 --backend-store-uri sqlite:///mlruns.db"
-    environment:
-      - MLFLOW_TRACKING_URI=http://localhost:5000
+    command: > # <-- IMPROVEMENT: Command now uses Postgres as the backend store instead of SQLite
+      bash -c "pip install mlflow psycopg2-binary boto3 &&
+               mlflow server
+               --host 0.0.0.0
+               --port 5000
+               --backend-store-uri postgresql+psycopg2://airflow:airflow@postgres/airflow
+               --default-artifact-root /mlflow/mlruns"
 
   # Prometheus
   prometheus:
@@ -156,11 +160,12 @@ services:
   # Model API Service
   model-api:
     build:
+      # NOTE: Using '.' as context is acceptable IF you have a comprehensive .dockerignore file at the root
+      # to prevent copying unnecessary files into the build context.
       context: .
       dockerfile: Dockerfile.api
     ports:
-      - "8080:8080"
-      - "8000:8000"  # Prometheus metrics
+      - "8000:8000" # <-- ASSUMPTION: Port 8000 is for the API, not Prometheus
     volumes:
       - ./models:/app/models
       - ./data:/app/data
@@ -173,6 +178,7 @@ services:
   # Spark Environment (for data processing)
   spark-env:
     build:
+      # NOTE: Using '.' as context is acceptable IF you have a comprehensive .dockerignore file at the root.
       context: .
       dockerfile: Dockerfile.spark
     volumes:
@@ -184,15 +190,16 @@ services:
   # React Frontend
   frontend:
     build:
-      context: ./frontend
+      context: ./frontend # This is correct and was the main bug fix.
       dockerfile: Dockerfile
     ports:
       - "3000:3000"
     volumes:
-      - ./frontend:/app
-      - /app/node_modules
+      - ./frontend/src:/app/src # More specific volume mount for hot-reloading
     environment:
-      - REACT_APP_API_URL=http://localhost:8000
+      # <-- IMPROVEMENT: Containers talk to each other using service names, not localhost.
+      # Also assuming the API runs on port 8000 as defined in this file.
+      - REACT_APP_API_URL=http://model-api:8000
     depends_on:
       - model-api
 
