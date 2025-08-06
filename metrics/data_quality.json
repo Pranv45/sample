@@ -1,0 +1,54 @@
+{
+  "total_matches": 1095,
+  "total_deliveries": 260920,
+  "unique_teams": 16,
+  "unique_venues": 58,
+  "unique_cities": 37,
+  "missing_values": {
+    "matches": {
+      "id": 0,
+      "season": 0,
+      "city": 51,
+      "date": 0,
+      "match_type": 0,
+      "player_of_match": 5,
+      "venue": 0,
+      "team1": 0,
+      "team2": 0,
+      "toss_winner": 0,
+      "toss_decision": 0,
+      "winner": 5,
+      "result": 0,
+      "result_margin": 19,
+      "target_runs": 3,
+      "target_overs": 3,
+      "super_over": 0,
+      "method": 1074,
+      "umpire1": 0,
+      "umpire2": 0
+    },
+    "deliveries": {
+      "match_id": 0,
+      "inning": 0,
+      "batting_team": 0,
+      "bowling_team": 0,
+      "over": 0,
+      "ball": 0,
+      "batter": 0,
+      "bowler": 0,
+      "non_striker": 0,
+      "batsman_runs": 0,
+      "extra_runs": 0,
+      "total_runs": 0,
+      "extras_type": 246795,
+      "is_wicket": 0,
+      "player_dismissed": 247970,
+      "dismissal_kind": 247970,
+      "fielder": 251566
+    }
+  },
+  "data_completeness": {
+    "matches": 94.70319634703196,
+    "deliveries": 77.58382104949905
+  }
+}
