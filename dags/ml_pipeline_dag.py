@@ -123,21 +123,63 @@ data_processing_task = DockerOperator(
     dag=dag,
 )
 
+def run_feature_engineering():
+    """Run feature engineering script."""
+    import subprocess
+    import logging
+    
+    try:
+        result = subprocess.run(['python', '/opt/airflow/scripts/feature_engineering.py'], 
+                              check=True, capture_output=True, text=True)
+        logging.info(f"Feature engineering completed: {result.stdout}")
+        return "Feature engineering completed"
+    except subprocess.CalledProcessError as e:
+        logging.error(f"Feature engineering failed: {e.stderr}")
+        raise
+
+def run_model_training():
+    """Run model training script."""
+    import subprocess
+    import logging
+    
+    try:
+        result = subprocess.run(['python', '/opt/airflow/scripts/train_model.py'], 
+                              check=True, capture_output=True, text=True)
+        logging.info(f"Model training completed: {result.stdout}")
+        return "Model training completed"
+    except subprocess.CalledProcessError as e:
+        logging.error(f"Model training failed: {e.stderr}")
+        raise
+
+def run_model_evaluation():
+    """Run model evaluation script."""
+    import subprocess
+    import logging
+    
+    try:
+        result = subprocess.run(['python', '/opt/airflow/scripts/evaluate_model.py'], 
+                              check=True, capture_output=True, text=True)
+        logging.info(f"Model evaluation completed: {result.stdout}")
+        return "Model evaluation completed"
+    except subprocess.CalledProcessError as e:
+        logging.error(f"Model evaluation failed: {e.stderr}")
+        raise
+
 feature_engineering_task = PythonOperator(
     task_id='feature_engineering',
-    python_callable=lambda: os.system('python /opt/airflow/scripts/feature_engineering.py'),
+    python_callable=run_feature_engineering,
     dag=dag,
 )
 
 model_training_task = PythonOperator(
     task_id='model_training',
-    python_callable=lambda: os.system('python /opt/airflow/scripts/train_model.py'),
+    python_callable=run_model_training,
     dag=dag,
 )
 
 model_evaluation_task = PythonOperator(
     task_id='model_evaluation',
-    python_callable=lambda: os.system('python /opt/airflow/scripts/evaluate_model.py'),
+    python_callable=run_model_evaluation,
     dag=dag,
 )
 
@@ -160,4 +202,7 @@ notification_task = PythonOperator(
 )
 
 # Define task dependencies
-check_data_task >> data_processing_task >> feature_engineering_task >> model_training_task >> model_evaluation_task >> dvc_pipeline_task >> deploy_model_task >> notification_task
+check_data_task >> data_processing_task >> feature_engineering_task >> model_training_task >> model_evaluation_task >> deploy_model_task >> notification_task
+
+# DVC pipeline task runs independently to avoid conflicts
+dvc_pipeline_task

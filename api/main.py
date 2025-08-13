@@ -1,4 +1,5 @@
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import pandas as pd
 import numpy as np
@@ -16,6 +17,15 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 
 # Initialize FastAPI app
 app = FastAPI(title="IPL Win Predictor API", version="1.0.0")
+
+# Add CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:3000", "http://frontend:3000"],  # Frontend URLs
+    allow_credentials=True,
+    allow_methods=["GET", "POST"],
+    allow_headers=["*"],
+)
 
 # Prometheus metrics
 PREDICTION_COUNTER = Counter('ipl_predictions_total', 'Total number of predictions made')
@@ -128,8 +138,8 @@ def get_confidence_level(probability: float) -> str:
 async def startup_event():
     """Load model on startup."""
     load_model()
-    # Start Prometheus metrics server
-    start_http_server(8000)
+    # Start Prometheus metrics server on different port
+    start_http_server(9090)
 
 @app.get("/")
 async def root():

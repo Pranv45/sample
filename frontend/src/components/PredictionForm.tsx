@@ -92,8 +92,10 @@ const PredictionForm: React.FC = () => {
   const [error, setError] = useState<string>('');
 
   const predictionMutation = useMutation(
-    (data: PredictionRequest) =>
-      axios.post<PredictionResponse>('/predict', data),
+    (data: PredictionRequest) => {
+      const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:8000';
+      return axios.post<PredictionResponse>(`${apiUrl}/predict`, data);
+    },
     {
       onSuccess: (response) => {
         setPrediction(response.data);
