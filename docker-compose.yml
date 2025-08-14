@@ -36,7 +36,7 @@ services:
       AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
       AIRFLOW__CELERY__RESULT_BACKEND: db+postgresql://airflow:airflow@postgres/airflow
       AIRFLOW__CELERY__BROKER_URL: redis://:@redis:6379/0
-      AIRFLOW__CORE__FERNET_KEY: ''
+      AIRFLOW__CORE__FERNET_KEY: 'UKMzEm3yIuFYEq4z4-3hWs7dSZLNBxwPv7O2aVJqOE8='
       AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
       AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
       AIRFLOW__API__AUTH_BACKEND: 'airflow.api.auth.backend.basic_auth'
@@ -70,7 +70,7 @@ services:
       AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
       AIRFLOW__CELERY__RESULT_BACKEND: db+postgresql://airflow:airflow@postgres/airflow
       AIRFLOW__CELERY__BROKER_URL: redis://:@redis:6379/0
-      AIRFLOW__CORE__FERNET_KEY: ''
+      AIRFLOW__CORE__FERNET_KEY: 'UKMzEm3yIuFYEq4z4-3hWs7dSZLNBxwPv7O2aVJqOE8='
       AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
       AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
     volumes:
@@ -97,7 +97,7 @@ services:
       AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
       AIRFLOW__CELERY__RESULT_BACKEND: db+postgresql://airflow:airflow@postgres/airflow
       AIRFLOW__CELERY__BROKER_URL: redis://:@redis:6379/0
-      AIRFLOW__CORE__FERNET_KEY: ''
+      AIRFLOW__CORE__FERNET_KEY: 'UKMzEm3yIuFYEq4z4-3hWs7dSZLNBxwPv7O2aVJqOE8='
     volumes:
       - ./dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs
